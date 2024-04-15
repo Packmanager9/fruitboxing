@@ -1718,7 +1718,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
         draw() {
             if (this.turn == 0) {
                 for (let t = 0; t < enemies.length; t++) {
-                    if(enemies[t].stunned <=0){
+                    if(enemies[t].stunned <=0 && enemies[t].health > 0){
                         // this.health -= enemies[t].damage
                         let shot = new Circle(enemies[t].body.x, enemies[t].body.y, 6, "red", -((enemies[t].body.x-this.body.x)/10), -((enemies[t].body.y-this.body.y)/10))
                         shot.life = 10
