@@ -1604,7 +1604,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
                         wet = 1
                         enemies[t].health -= Math.max(0, (this.damage - Math.max(enemies[t].armor - this.armor, 0)))
                         enemies[t].poison += this.poison
-                        enemies[t].stunned += this.stun
+                        enemies[t].stunned = this.stun
                         pomao.health += this.heal
                         if(pomao.health > pomao.maxhealth){
                             pomao.health = pomao.maxhealth
